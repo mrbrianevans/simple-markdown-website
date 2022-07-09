@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     concurrency:
@@ -20,18 +20,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - run: npm ci
-      - run: npm run build
-      - run: npm run start
+          cache: 'pnpm'
+      - name: Install PNPM
+        run: npm i -g pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build typescript
+        run: pnpm run build
+      - name: Render markdown
+        run: pnpm run start
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
