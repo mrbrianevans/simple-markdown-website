@@ -2,10 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18.0.0
+  create-html: ^4.1.0
   markdown-it: ^13.0.1
   typescript: ^4.7.4
 
 dependencies:
+  create-html: 4.1.0
   markdown-it: 13.0.1
 
 devDependencies:
@@ -22,9 +24,22 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: false
 
+  /create-html/4.1.0:
+    resolution: {integrity: sha512-1BNjCqdLVJfhCdRDseyDg8NqYu4Y0ZOk09VC8GqAUdp4rfmfWRfvh77YBRJPLQDQN5qhHOvAnHMjEgy29DCuzg==}
+    hasBin: true
+    dependencies:
+      exit: 0.1.2
+      minimist: 1.2.6
+    dev: false
+
   /entities/3.0.1:
     resolution: {integrity: sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==}
     engines: {node: '>=0.12'}
+    dev: false
+
+  /exit/0.1.2:
+    resolution: {integrity: sha512-Zk/eNKV2zbjpKzrsQ+n1G6poVbErQxJ0LBOJXaKZ1EViLzH+hrLu9cdXI4zw9dBQJslwBEpbQ2P1oS7nDxs6jQ==}
+    engines: {node: '>= 0.8.0'}
     dev: false
 
   /linkify-it/4.0.1:
@@ -46,6 +61,10 @@ packages:
 
   /mdurl/1.0.1:
     resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
+    dev: false
+
+  /minimist/1.2.6:
+    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: false
 
   /typescript/4.7.4:
